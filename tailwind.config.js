@@ -7,24 +7,32 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Inter'
+        sans: 'Inter',
+        jet: ["JetBrains Mono", "serif"]
       },
       colors: {
-        primaryGray: '#161616',
-        secondaryGray: '#212121',
-        tertiaryGray: '#2C2C2C',
-        quartiaryGray: '#373737',
-        quintiaryGray: '#909090',
+        grayv1: '#161616',
+        grayv2: '#212121',
+        grayv3: '#2C2C2C',
+        grayv4: '#373737',
+        grayv5: '#909090',
+        grayv6: '#0F131A',
 
-        primaryBlue: '#020617',
-        secondaryBlue: '#5276bf',
-        tertiaryBlue: '#171F2D',
-        
-        primaryGreen: '#28C780',
-        secondaryGreen: '#039754',
-        tertiaryGreenTransparence: 'rgba(40, 199, 128, 0.15)',
+        bluev1: '#020617',
+        bluev2: '#5276bf',
+        bluev3: '#0C1939',
+        bluev4: '#171F2D',
+        bluev5: '#000319',
+
+        react: '#00FFFF',
+
+        textv1: '#CBACF9',
       },
-      backgroundImage: "/quadriculado.avif"
+      backgroundImage: {
+        quadriculado: "url(/quadriclado.png)",
+        intro: "url(/Background_Intro.png)",
+        bgPattern: "url(/bg-pattern.png)",
+      },
     },
   },
   plugins: [],
