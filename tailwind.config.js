@@ -23,8 +23,15 @@ export default {
         bluev3: '#0C1939',
         bluev4: '#171F2D',
         bluev5: '#000319',
+        bluev6: '#00083f',
 
         react: '#00FFFF',
+        typescript: '#2D79C7',
+        nestjs: '#EA2863',
+        nextjs: '#fff',
+        php: '#4F5B93',
+        laravel: '#FF2D20',
+        graphql: '#F6009C',
 
         textv1: '#CBACF9',
       },

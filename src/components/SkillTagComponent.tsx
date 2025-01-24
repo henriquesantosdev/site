@@ -8,7 +8,7 @@ export const SkillTagComponent: React.FC<skillTagComponentProps> = ({ children, 
   return (
     <span className={`${background} flex items-center w-min py-1 px-4 rounded-full gap-2 font-jet font-medium`}>
       {children}
-      <span className="text-base">{text}</span>
+      <span className="text-sm">{text}</span>
     </span>
   )
 }
