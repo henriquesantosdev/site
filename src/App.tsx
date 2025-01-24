@@ -81,6 +81,18 @@ export default function App() {
               <SkillTagComponent background="bg-react/15" text="React">
                 <FaReact className="text-react size-5" />
               </SkillTagComponent>
+
+              <SkillTagComponent background="bg-react/15" text="React">
+                <FaReact className="text-react size-5" />
+              </SkillTagComponent>
+
+              <SkillTagComponent background="bg-react/15" text="React">
+                <FaReact className="text-react size-5" />
+              </SkillTagComponent>
+
+              <SkillTagComponent background="bg-react/15" text="React">
+                <FaReact className="text-react size-5" />
+              </SkillTagComponent>
             </div>
           </section>
 
@@ -91,7 +103,7 @@ export default function App() {
           </section>
 
           <section className="mt-4 p-4 rounded-xl text-zinc-500 font-normal">
-            <p>Made with v by <a href="">HenriqueSantosDev</a></p>
+            <p>Made with </p>
           </section>
         </div>
       </div>
