@@ -1,4 +1,4 @@
-import { BicepsFlexed, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, User } from "lucide-react";
+import { BicepsFlexed, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Menu, User } from "lucide-react";
 import { ButtonComponent } from './components/ButtonComponent'
 import { MenuOption } from "./components/MenuOption";
 import { SkillTagComponent } from "./components/SkillTagComponent";
@@ -7,12 +7,12 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { SiNestjs } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { GrGraphQl } from "react-icons/gr";
-import { CardComponent } from "./components/CardComponent";
 import { useState } from "react";
 
 export default function App() {
 
   const [darkMode, setDarkMode] = useState(true)
+  const [showMenu, setShowMenu] = useState(false)
 
   const handleSetDarkMode = () => {
     if (darkMode === true) {
@@ -22,42 +22,86 @@ export default function App() {
     }
   }
 
+  const handleShowMenu = () => {
+    if (showMenu === false) {
+      setShowMenu(true)
+    } else {
+      setShowMenu(false)
+    }
+  }
+
   return (
     <>
       <div className="bg-bluev5 p-4">
+        <nav className="max-w-5xl mx-auto bg-bluev5/50 backdrop-blur-sm justify-between p-2 hidden md:flex rounded-xl sticky top-4">
+          <div className="flex gap-4 sm:gap-8 ">
+            <MenuOption href={'#'}>
+              <House />
+              <span>Home</span>
+            </MenuOption>
+
+            <MenuOption href={'#'}>
+              <User />
+              <span>Sobre mim</span>
+            </MenuOption>
+
+            <MenuOption href={'#'}>
+              <BicepsFlexed />
+              <span>Habilidades</span>
+            </MenuOption>
+
+            <MenuOption href={'#'}>
+              <FolderCode />
+              <span>Projetos</span>
+            </MenuOption>
+          </div>
+
+          <div onClick={handleSetDarkMode} className="flex gap-4 items-center">
+            {darkMode ? (
+              <CloudMoon className="text-grayv5 size-10 hover:bg-bluev6 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+            ) : (
+              <CloudSun className="text-grayv5 size-10 hover:bg-bluev6 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+            )}
+          </div>
+        </nav>
+
+
+        <div className="fixed bottom-5 right-5">
+          <div className="flex items-end flex-col">
+            {showMenu && (
+              <div className="bg-sky-500/50 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
+                <MenuOption href={'#'}>
+                  <House className="text-white" />
+                  <span className="text-white">Home</span>
+                </MenuOption>
+
+                <MenuOption href={'#'}>
+                  <User className="text-white" />
+                  <span className="text-white">Sobre mim</span>
+                </MenuOption>
+
+                <MenuOption href={'#'}>
+                  <BicepsFlexed className="text-white" />
+                  <span className="text-white">Habilidades</span>
+                </MenuOption>
+
+                <MenuOption href={'#'}>
+                  <FolderCode className="text-white" />
+                  <span className="text-white">Projetos</span>
+                </MenuOption>
+              </div>
+            )}
+
+            <button onClick={handleShowMenu} className="bg-sky-500/50 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
+              <div className="flex gap-2 items-center">
+                <Menu className="text-white size-12" />
+              </div>
+            </button>
+          </div>
+        </div>
+
+
         <div className="max-w-6xl mx-auto">
-          <nav className="bg-bluev5/30 backdrop-blur-md flex justify-between p-2 rounded-xl sticky top-4">
-            <div className="flex gap-8">
-              <MenuOption href={'#'}>
-                <House />
-                Home
-              </MenuOption>
-
-              <MenuOption href={'#'}>
-                <User />
-                Sobre mim
-              </MenuOption>
-
-              <MenuOption href={'#'}>
-                <BicepsFlexed />
-                Habilidades
-              </MenuOption>
-
-              <MenuOption href={'#'}>
-                <FolderCode />
-                Projetos
-              </MenuOption>
-            </div>
-
-            <div onClick={handleSetDarkMode} className="flex gap-4 items-center">
-              {darkMode ? (
-                <CloudMoon className="text-grayv5 size-10 hover:bg-bluev6 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
-              ) : (
-                <CloudSun className="text-grayv5 size-10 hover:bg-bluev6 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
-              )}
-            </div>
-          </nav>
-
           <section className="bg-intro bg-no-repeat bg-cover h-[500px] bg-center flex items-center gap-24 justify-center flex-row p-6 rounded-xl">
 
             <div>
@@ -143,9 +187,31 @@ export default function App() {
               <h2 className="font-jet text-left text-xl text-sky-500">/Projetos</h2>
             </div>
             <div className="flex-wrap bg-bluev1">
-              <CardComponent img="/avatar.png" tecs={['Typescript', 'Node', 'React',]}>
+              {/* <CardComponent img="/avatar.png" tecs={['Typescript', 'Node', 'React',]}>
                 asdadsadsad
-              </CardComponent>
+              </CardComponent> */}
+              <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
+                <div className="md:flex">
+                  <div className="md:shrink-0">
+                    <img
+                      className="h-48 w-full object-cover md:h-full md:w-48"
+                      src="/img/building.jpg"
+                      alt="Modern building architecture"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <div className="text-sm font-semibold tracking-wide text-indigo-500 uppercase">Company retreats</div>
+                    <a href="#" className="mt-1 block text-lg leading-tight font-medium text-black hover:underline">
+                      Incredible accommodation for your team
+                    </a>
+                    <p className="mt-2 text-gray-500">
+                      Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of
+                      places to do just that.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </section>
 
