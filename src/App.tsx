@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <>
-      <div className="bg-bluev5 p-4">
+      <div className="bg-bluev5 p-2 md:p-4">
         <nav className="max-w-5xl mx-auto bg-bluev5/50 backdrop-blur-sm justify-between p-2 hidden md:flex rounded-xl sticky top-4">
           <div className="flex gap-4 sm:gap-8 ">
             <MenuOption href={'#'}>
@@ -68,7 +68,7 @@ export default function App() {
         <div className="fixed bottom-5 right-5">
           <div className="flex items-end flex-col">
             {showMenu && (
-              <div className="bg-sky-800/50 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
+              <div className="bg-bluev5/50 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
                 <MenuOption href={'#'}>
                   <House className="text-white" />
                   <span className="text-white">Home</span>
@@ -91,7 +91,7 @@ export default function App() {
               </div>
             )}
 
-            <button onClick={handleShowMenu} className="bg-sky-800/50 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
+            <button onClick={handleShowMenu} className="bg-bluev5/50 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
               <div className="flex gap-2 items-center">
                 <Menu className="text-white size-12" />
               </div>
@@ -101,11 +101,11 @@ export default function App() {
 
 
         <div className="max-w-6xl mx-auto">
-          <section className="bg-intro bg-no-repeat bg-cover h-[calc(100vh - 10px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+          <section className="bg-intro bg-no-repeat bg-cover h-screen md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
             <div>
-              <h1 className="text-white font-bold text-5xl">Olá, eu sou <br /> Henrique Santos</h1>
-              <p className="text-sky-500 font-semibold text-xl mt-2">Fullstack developer</p>
+              <h1 className="text-white font-bold text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
+              <p className="text-sky-500 font-semibold text-xl mt-2 text-center md:text-left">Fullstack developer</p>
 
               <div className="flex gap-2 mt-8">
                 <ButtonComponent>
@@ -119,7 +119,7 @@ export default function App() {
                 </ButtonComponent>
               </div>
             </div>
-            
+
             <div>
               <img
                 src="/avatar.png"

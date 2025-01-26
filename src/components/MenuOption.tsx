@@ -5,7 +5,7 @@ interface MenuOptionProps {
 
 export const MenuOption: React.FC<MenuOptionProps> = ({ children, href }) => {
   return (
-    <a href={href} className="text-grayv5 p-2 rounded-lg flex font-semibold gap-2 hover:text-white hover:bg-bluev6">
+    <a href={href} className="text-grayv5 p-2 rounded-lg flex font-semibold gap-2 hover:text-white hover:bg-sky-500">
       {children}
     </a>
   )
