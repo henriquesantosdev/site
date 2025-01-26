@@ -132,7 +132,7 @@ export default function App() {
               <img
                 src="/avatar.png"
                 alt="Imagem do desenvolvedor Henrique Santos"
-                className="w-56 rounded-xl border-4 border-solid border-zinc-800"
+                className="w-44 md:w-56 rounded-xl border-4 border-solid border-zinc-800"
               />
             </div>
           </section>
