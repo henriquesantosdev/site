@@ -1,7 +1,7 @@
-import { BicepsFlexed, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
+import { BicepsFlexed, Brain, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
 import { ButtonComponent } from './components/ButtonComponent'
 import { MenuOption } from "./components/MenuOption";
-import { SkillTagComponent } from "./components/SkillTagComponent";
+import { TagComponent } from "./components/TagComponent";
 import { FaLaravel, FaNodeJs, FaPhp, FaReact } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiNestjs } from "react-icons/si";
@@ -46,7 +46,7 @@ export default function App() {
             </MenuOption>
 
             <MenuOption href={'#skils'}>
-              <BicepsFlexed />
+              <Brain />
               <span>Habilidades</span>
             </MenuOption>
 
@@ -80,7 +80,7 @@ export default function App() {
                 </MenuOption>
 
                 <MenuOption href={'#skills'}>
-                  <BicepsFlexed className="text-white" />
+                  <Brain className="text-white" />
                   <span className="text-white">Habilidades</span>
                 </MenuOption>
 
@@ -116,12 +116,12 @@ export default function App() {
               <p className="text-sky-500 font-semibold text-2xl mt-4 md:mt-2 text-center md:text-left">Fullstack developer</p>
 
               <div className="flex gap-2 mt-8">
-                <ButtonComponent>
+                <ButtonComponent link="https://wa.me/5581996978021" target="_blank">
                   <Contact />
                   Contato
                 </ButtonComponent>
 
-                <ButtonComponent>
+                <ButtonComponent link="/CV-henrique-santos-developer.pdf" target="_blank">
                   <FileDown />
                   Download CV
                 </ButtonComponent>
@@ -143,77 +143,77 @@ export default function App() {
           <section id="sobremim" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
             <h2 className="font-jet text-xl text-left text-sky-500">/Sobre mim</h2>
             <p className="font-jet text-lg text-left font-medium mt-4">
-              Desenvolvedor apaixonado por transformar ideias em realidade digital. Experiente em PHP, Laravel, tupescript, graphql e MySQL, com habilidade comprovada em desenvolvimento web. Comprometido em criar soluções robustas e eficientes para atender às necessidades dos clientes. Em busca de oportunidades desafiadoras para expandir habilidades e contribuir para projetos inovadores.
+              Desenvolvedor apaixonado por transformar ideias em realidade digital. Experiente em PHP, typescript, node e seus frameworks mais modernos, com habilidade comprovada em desenvolvimento web. Comprometido em criar soluções robustas e eficientes para atender às necessidades dos clientes. Em busca de oportunidades desafiadoras para expandir habilidades e contribuir para projetos inovadores.
             </p>
           </section>
 
           <section id="skills" className="mt-10 p-4 rounded-xl text-white font-bold">
             <h2 className="font-jet text-left text-xl text-sky-500">/Skills</h2>
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
-              <SkillTagComponent background="bg-react/20" text="React">
+              <TagComponent style="bg-react/20" text="React">
                 <FaReact className="text-react size-4" />
-              </SkillTagComponent>
+              </TagComponent>
 
-              <SkillTagComponent background="bg-typescript/20" text="Typescript">
+              <TagComponent style="bg-typescript/20" text="Typescript">
                 <BiLogoTypescript className="text-typescript size-4" />
-              </SkillTagComponent>
+              </TagComponent>
 
-              <SkillTagComponent background="bg-node/20" text="Node">
+              <TagComponent style="bg-node/20" text="Node">
                 <FaNodeJs className="text-node size-4" />
-              </SkillTagComponent>
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nestjs/20" text="Nestjs">
+              <TagComponent style="bg-nestjs/20" text="Nestjs">
                 <SiNestjs className="text-nestjs size-4" />
-              </SkillTagComponent>
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nextjs/20" text="Nextjs">
+              <TagComponent style="bg-nextjs/20" text="Nextjs">
                 <RiNextjsFill className="text-nextjs size-4" />
-              </SkillTagComponent>
+              </TagComponent>
 
-              <SkillTagComponent background="bg-php/20" text="Php">
+              <TagComponent style="bg-php/20" text="Php">
                 <FaPhp className="text-php size-4" />
-              </SkillTagComponent>
+              </TagComponent>
 
-              <SkillTagComponent background="bg-laravel/20" text="Laravel">
+              <TagComponent style="bg-laravel/20" text="Laravel">
                 <FaLaravel className="text-laravel size-4" />
-              </SkillTagComponent>
+              </TagComponent>
 
-              <SkillTagComponent background="bg-graphql/20" text="Graphql">
+              <TagComponent style="bg-graphql/20" text="Graphql">
                 <GrGraphQl className="text-graphql size-4" />
-              </SkillTagComponent>
+              </TagComponent>
             </div>
           </section>
 
           <section id="soft-skills" className="mt-4 p-4 rounded-xl text-white font-bold">
             <h2 className="font-jet text-left text-xl text-sky-500">/Soft-skills</h2>
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
-              <SkillTagComponent background="bg-nextjs/20" text="Comunicação eficaz">
-                <MessageSquareText className="text-nextjs size-4"/>
-              </SkillTagComponent>
+              <TagComponent style="bg-nextjs/20" text="Comunicação eficaz">
+                <MessageSquareText className="text-nextjs size-4" />
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nextjs/20" text="Trabalho em equipe">
-                <Users className="text-nextjs size-4"/>
-              </SkillTagComponent>
+              <TagComponent style="bg-nextjs/20" text="Trabalho em equipe">
+                <Users className="text-nextjs size-4" />
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nextjs/20" text="Resolução de problemas">
-                <TriangleAlert className="text-nextjs size-4"/>
-              </SkillTagComponent>
+              <TagComponent style="bg-nextjs/20" text="Resolução de problemas">
+                <TriangleAlert className="text-nextjs size-4" />
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nextjs/20" text="Adaptabilidade">
-                <RotateCcw className="text-nextjs size-4"/>
-              </SkillTagComponent>
+              <TagComponent style="bg-nextjs/20" text="Adaptabilidade">
+                <RotateCcw className="text-nextjs size-4" />
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nextjs/20" text="Pensamento crítico">
-                <BrainCircuit className="text-nextjs size-4"/>
-              </SkillTagComponent>
+              <TagComponent style="bg-nextjs/20" text="Pensamento crítico">
+                <BrainCircuit className="text-nextjs size-4" />
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nextjs/20" text="Organização">
-                <Layers className="text-nextjs size-4"/>
-              </SkillTagComponent>
+              <TagComponent style="bg-nextjs/20" text="Organização">
+                <Layers className="text-nextjs size-4" />
+              </TagComponent>
 
-              <SkillTagComponent background="bg-nextjs/20" text="Proatividade">
-                <Split className="text-nextjs size-4"/>
-              </SkillTagComponent>
+              <TagComponent style="bg-nextjs/20" text="Proatividade">
+                <Split className="text-nextjs size-4" />
+              </TagComponent>
             </div>
           </section>
 
@@ -222,25 +222,32 @@ export default function App() {
               <h2 className="font-jet text-left text-xl text-sky-500">/Projetos</h2>
             </div>
 
-            <div className="flex-wrap bg-bluev1">
-              <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
+            <div className="flex-wrap">
+
+              <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-grayv6 shadow-md md:max-w-2xl">
                 <div className="md:flex">
                   <div className="md:shrink-0">
                     <img
                       className="h-48 w-full object-cover md:h-full md:w-48"
-                      src="/img/building.jpg"
+                      src="/avatar.png"
                       alt="Modern building architecture"
                     />
                   </div>
                   <div className="p-8">
-                    <div className="text-sm font-semibold tracking-wide text-indigo-500 uppercase">Company retreats</div>
-                    <a href="#" className="mt-1 block text-lg leading-tight font-medium text-black hover:underline">
-                      Incredible accommodation for your team
-                    </a>
-                    <p className="mt-2 text-gray-500">
+                    <div className="text-sm font-extrabold font-jet tracking-wide text-sky-500 uppercase">Company retreats</div>
+                    <p className="mt-2 text-white text-sm font-jet">
                       Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of
                       places to do just that.
                     </p>
+                    <div className="mt-4 flex gap-2 flex-wrap">
+                      <TagComponent style="border border-react" text="React">
+                        <FaReact className="text-react size-4" />
+                      </TagComponent>
+
+                      <TagComponent style="border border-node" text="React">
+                        <FaNodeJs className="text-node size-4" />
+                      </TagComponent>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -248,7 +255,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="bg-zinc-900 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
+          <section className="bg-grayv6 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
             <p>Made with 💙 by Henrique Santos</p>
           </section>
         </div>
