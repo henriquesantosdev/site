@@ -58,9 +58,9 @@ export default function App() {
 
           <div onClick={handleSetDarkMode} className="flex gap-4 items-center">
             {darkMode ? (
-              <CloudMoon className="text-grayv5 size-10 hover:bg-bluev6 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+              <CloudMoon className="text-grayv5 size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
             ) : (
-              <CloudSun className="text-grayv5 size-10 hover:bg-bluev6 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+              <CloudSun className="text-grayv5 size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
             )}
           </div>
         </nav>
@@ -89,11 +89,13 @@ export default function App() {
                   <span className="text-white">Projetos</span>
                 </MenuOption>
 
-                {darkMode ? (
-                  <CloudMoon className="text-white size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
-                ) : (
-                  <CloudSun className="text-white size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
-                )}
+                <div onClick={handleSetDarkMode} className="flex items-center">
+                  {darkMode ? (
+                    <CloudMoon className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                  ) : (
+                    <CloudSun className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                  )}
+                </div>
               </div>
             )}
 
@@ -107,7 +109,7 @@ export default function App() {
 
 
         <div className="max-w-6xl mx-auto">
-          <section id="home" className="bg-intro bg-no-repeat bg-cover h-[900px] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+          <section id="home" className="bg-intro bg-no-repeat bg-cover h-[calc(100vh-100px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
             <div className="w-full md:w-5/12">
               <h1 className="text-white font-bold text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
