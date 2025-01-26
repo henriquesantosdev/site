@@ -36,7 +36,7 @@ export default {
       backgroundImage: {
         quadriculado: "url(/quadriclado.png)",
         intro: "url(/Background_Intro.png)",
-        bgPattern: "url(/bg-pattern.png)",
+        mobileV5: "url(/bg-mobile-v5-t.jpeg)",
       },
     },
   },

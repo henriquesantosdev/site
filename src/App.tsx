@@ -108,12 +108,12 @@ export default function App() {
         </div>
 
 
-        <div className="max-w-6xl mx-auto">
-          <section id="home" className="bg-intro bg-no-repeat bg-cover h-[calc(100vh-100px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+        <div className="bg-mobileV5 bg-no-repeat bg-cover md:bg-inherit max-w-6xl mx-auto">
+          <section id="home" className="md:bg-intro bg-no-repeat bg-cover h-[calc(100vh-50px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
             <div className="w-full md:w-5/12">
-              <h1 className="text-white font-bold text-4xl md:text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
-              <p className="text-sky-500 font-semibold text-lg md:text-xl mt-2 text-center md:text-left">Fullstack developer</p>
+              <h1 className="text-white whitespace-nowrap font-bold text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
+              <p className="text-sky-500 font-semibold text-2xl mt-2 text-center md:text-left">Fullstack developer</p>
 
               <div className="flex gap-2 mt-8">
                 <ButtonComponent>
