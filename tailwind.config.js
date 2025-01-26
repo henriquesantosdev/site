@@ -27,6 +27,7 @@ export default {
 
         react: '#00FFFF',
         typescript: '#2D79C7',
+        node: '#84C00B',
         nestjs: '#EA2863',
         nextjs: '#fff',
         php: '#4F5B93',

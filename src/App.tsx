@@ -1,8 +1,8 @@
-import { BicepsFlexed, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Menu, User } from "lucide-react";
+import { BicepsFlexed, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
 import { ButtonComponent } from './components/ButtonComponent'
 import { MenuOption } from "./components/MenuOption";
 import { SkillTagComponent } from "./components/SkillTagComponent";
-import { FaLaravel, FaPhp, FaReact } from "react-icons/fa";
+import { FaLaravel, FaNodeJs, FaPhp, FaReact } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiNestjs } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
@@ -108,8 +108,8 @@ export default function App() {
         </div>
 
 
-        <div className="bg-mobileV5 bg-no-repeat bg-cover md:bg-inherit max-w-6xl mx-auto">
-          <section id="home" className="md:bg-intro bg-no-repeat bg-cover h-[calc(100vh-50px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+        <div className="max-w-6xl mx-auto">
+          <section id="home" className="bg-mobileV5 md:bg-intro bg-no-repeat bg-cover h-[calc(100vh-50px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
             <div className="w-full md:w-5/12">
               <h1 className="text-white whitespace-nowrap font-bold text-[2.75rem]/10 md:text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
@@ -158,6 +158,10 @@ export default function App() {
                 <BiLogoTypescript className="text-typescript size-4" />
               </SkillTagComponent>
 
+              <SkillTagComponent background="bg-node/20" text="Node">
+                <FaNodeJs className="text-node size-4" />
+              </SkillTagComponent>
+
               <SkillTagComponent background="bg-nestjs/20" text="Nestjs">
                 <SiNestjs className="text-nestjs size-4" />
               </SkillTagComponent>
@@ -184,31 +188,31 @@ export default function App() {
             <h2 className="font-jet text-left text-xl text-sky-500">/Soft-skills</h2>
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
               <SkillTagComponent background="bg-nextjs/20" text="Comunicação eficaz">
-                <RiNextjsFill className="text-nextjs size-4" />
+                <MessageSquareText className="text-nextjs size-4"/>
               </SkillTagComponent>
 
               <SkillTagComponent background="bg-nextjs/20" text="Trabalho em equipe">
-                <RiNextjsFill className="text-nextjs size-4" />
+                <Users className="text-nextjs size-4"/>
               </SkillTagComponent>
 
               <SkillTagComponent background="bg-nextjs/20" text="Resolução de problemas">
-                <RiNextjsFill className="text-nextjs size-4" />
+                <TriangleAlert className="text-nextjs size-4"/>
               </SkillTagComponent>
 
               <SkillTagComponent background="bg-nextjs/20" text="Adaptabilidade">
-                <RiNextjsFill className="text-nextjs size-4" />
+                <RotateCcw className="text-nextjs size-4"/>
               </SkillTagComponent>
 
               <SkillTagComponent background="bg-nextjs/20" text="Pensamento crítico">
-                <RiNextjsFill className="text-nextjs size-4" />
+                <BrainCircuit className="text-nextjs size-4"/>
               </SkillTagComponent>
 
               <SkillTagComponent background="bg-nextjs/20" text="Organização">
-                <RiNextjsFill className="text-nextjs size-4" />
+                <Layers className="text-nextjs size-4"/>
               </SkillTagComponent>
 
               <SkillTagComponent background="bg-nextjs/20" text="Proatividade">
-                <RiNextjsFill className="text-nextjs size-4" />
+                <Split className="text-nextjs size-4"/>
               </SkillTagComponent>
             </div>
           </section>
