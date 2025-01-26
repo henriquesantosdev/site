@@ -1,4 +1,4 @@
-import { BicepsFlexed, Brain, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
+import { Brain, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
 import { ButtonComponent } from './components/ButtonComponent'
 import { MenuOption } from "./components/MenuOption";
 import { TagComponent } from "./components/TagComponent";
