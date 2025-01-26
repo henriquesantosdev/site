@@ -65,11 +65,10 @@ export default function App() {
           </div>
         </nav>
 
-
         <div className="fixed bottom-5 right-5">
           <div className="flex items-end flex-col">
             {showMenu && (
-              <div className="bg-sky-500/50 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
+              <div className="bg-sky-800/50 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
                 <MenuOption href={'#'}>
                   <House className="text-white" />
                   <span className="text-white">Home</span>
@@ -92,7 +91,7 @@ export default function App() {
               </div>
             )}
 
-            <button onClick={handleShowMenu} className="bg-sky-500/50 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
+            <button onClick={handleShowMenu} className="bg-sky-800/50 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
               <div className="flex gap-2 items-center">
                 <Menu className="text-white size-12" />
               </div>
@@ -102,7 +101,7 @@ export default function App() {
 
 
         <div className="max-w-6xl mx-auto">
-          <section className="bg-intro bg-no-repeat bg-cover h-[500px] bg-center flex items-center gap-24 justify-center flex-row p-6 rounded-xl">
+          <section className="bg-intro bg-no-repeat bg-cover h-[calc(100vh - 10px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
             <div>
               <h1 className="text-white font-bold text-5xl">Olá, eu sou <br /> Henrique Santos</h1>
@@ -120,6 +119,7 @@ export default function App() {
                 </ButtonComponent>
               </div>
             </div>
+            
             <div>
               <img
                 src="/avatar.png"
@@ -186,10 +186,8 @@ export default function App() {
             <div className="mb-4">
               <h2 className="font-jet text-left text-xl text-sky-500">/Projetos</h2>
             </div>
+
             <div className="flex-wrap bg-bluev1">
-              {/* <CardComponent img="/avatar.png" tecs={['Typescript', 'Node', 'React',]}>
-                asdadsadsad
-              </CardComponent> */}
               <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
                 <div className="md:flex">
                   <div className="md:shrink-0">
