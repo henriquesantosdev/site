@@ -101,9 +101,9 @@ export default function App() {
 
 
         <div className="max-w-6xl mx-auto">
-          <section className="bg-intro bg-no-repeat bg-cover h-screen md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+          <section className="bg-intro bg-no-repeat bg-cover h-[900px] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
-            <div>
+            <div className="w-full md:w-5/12">
               <h1 className="text-white font-bold text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
               <p className="text-sky-500 font-semibold text-xl mt-2 text-center md:text-left">Fullstack developer</p>
 
