@@ -32,8 +32,6 @@ export default {
         php: '#4F5B93',
         laravel: '#FF2D20',
         graphql: '#F6009C',
-
-        textv1: '#CBACF9',
       },
       backgroundImage: {
         quadriculado: "url(/quadriclado.png)",

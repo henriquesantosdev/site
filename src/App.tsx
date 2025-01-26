@@ -35,22 +35,22 @@ export default function App() {
       <div className="bg-bluev5 p-2 md:p-4">
         <nav className="max-w-5xl mx-auto bg-bluev5/50 backdrop-blur-sm justify-between p-2 hidden md:flex rounded-xl sticky top-4">
           <div className="flex gap-4 sm:gap-8 ">
-            <MenuOption href={'#'}>
+            <MenuOption href={'#home'}>
               <House />
               <span>Home</span>
             </MenuOption>
 
-            <MenuOption href={'#'}>
+            <MenuOption href={'#sobremim'}>
               <User />
               <span>Sobre mim</span>
             </MenuOption>
 
-            <MenuOption href={'#'}>
+            <MenuOption href={'#skils'}>
               <BicepsFlexed />
               <span>Habilidades</span>
             </MenuOption>
 
-            <MenuOption href={'#'}>
+            <MenuOption href={'#projetos'}>
               <FolderCode />
               <span>Projetos</span>
             </MenuOption>
@@ -69,25 +69,31 @@ export default function App() {
           <div className="flex items-end flex-col">
             {showMenu && (
               <div className="bg-bluev5/50 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
-                <MenuOption href={'#'}>
+                <MenuOption href={'#home'}>
                   <House className="text-white" />
                   <span className="text-white">Home</span>
                 </MenuOption>
 
-                <MenuOption href={'#'}>
+                <MenuOption href={'#sobremim'}>
                   <User className="text-white" />
                   <span className="text-white">Sobre mim</span>
                 </MenuOption>
 
-                <MenuOption href={'#'}>
+                <MenuOption href={'#skills'}>
                   <BicepsFlexed className="text-white" />
                   <span className="text-white">Habilidades</span>
                 </MenuOption>
 
-                <MenuOption href={'#'}>
+                <MenuOption href={'#projetos'}>
                   <FolderCode className="text-white" />
                   <span className="text-white">Projetos</span>
                 </MenuOption>
+
+                {darkMode ? (
+                  <CloudMoon className="text-white size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                ) : (
+                  <CloudSun className="text-white size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                )}
               </div>
             )}
 
@@ -101,7 +107,7 @@ export default function App() {
 
 
         <div className="max-w-6xl mx-auto">
-          <section className="bg-intro bg-no-repeat bg-cover h-[900px] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+          <section id="home" className="bg-intro bg-no-repeat bg-cover h-[900px] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
             <div className="w-full md:w-5/12">
               <h1 className="text-white font-bold text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
@@ -130,17 +136,16 @@ export default function App() {
           </section>
         </div>
 
-
         <div className="max-w-3xl mx-auto mt-4">
 
-          <section className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
+          <section id="sobremim" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
             <h2 className="font-jet text-xl text-left text-sky-500">/Sobre mim</h2>
             <p className="font-jet text-lg text-left font-medium mt-4">
               Desenvolvedor apaixonado por transformar ideias em realidade digital. Experiente em PHP, Laravel, tupescript, graphql e MySQL, com habilidade comprovada em desenvolvimento web. Comprometido em criar soluções robustas e eficientes para atender às necessidades dos clientes. Em busca de oportunidades desafiadoras para expandir habilidades e contribuir para projetos inovadores.
             </p>
           </section>
 
-          <section className="mt-10 p-4 rounded-xl text-white font-bold">
+          <section id="skills" className="mt-10 p-4 rounded-xl text-white font-bold">
             <h2 className="font-jet text-left text-xl text-sky-500">/Skills</h2>
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
               <SkillTagComponent background="bg-react/20" text="React">
@@ -173,7 +178,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="mt-4 p-4 rounded-xl text-white font-bold">
+          <section id="soft-skills" className="mt-4 p-4 rounded-xl text-white font-bold">
             <h2 className="font-jet text-left text-xl text-sky-500">/Soft-skills</h2>
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
               <SkillTagComponent background="bg-nextjs/20" text="Nextjs">
@@ -182,7 +187,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="mt-10 p-4 rounded-xl text-2xl text-white font-bold">
+          <section id="projetos" className="mt-10 p-4 rounded-xl text-2xl text-white font-bold">
             <div className="mb-4">
               <h2 className="font-jet text-left text-xl text-sky-500">/Projetos</h2>
             </div>
@@ -214,7 +219,7 @@ export default function App() {
           </section>
 
           <section className="bg-zinc-900 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
-            <p>Made with </p>
+            <p>Made with 💙 by Henrique Santos</p>
           </section>
         </div>
       </div>
