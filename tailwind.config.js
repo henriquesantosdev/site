@@ -17,6 +17,7 @@ export default {
         grayv4: '#373737',
         grayv5: '#909090',
         grayv6: '#0F131A',
+        grayv7: '#F1F1F1',
 
         bluev1: '#020617',
         bluev2: '#5276bf',

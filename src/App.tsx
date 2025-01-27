@@ -9,8 +9,8 @@ import { SiNestjs } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { GrGraphQl } from "react-icons/gr";
 import { useState } from "react";
-import { TagComponentProjects } from "./components/TagComponentProjects";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { CardComponent } from "./components/CardComponent";
 
 export default function App() {
 
@@ -43,7 +43,7 @@ export default function App() {
     <div id="dark-mode-div" className="">
       <SpeedInsights />
       <div className="bg-bluev5 dark:bg-neutral-100 p-2 md:p-4">
-        <nav className="max-w-5xl mx-auto bg-bluev5/50 dark:bg-neutral-100/50 backdrop-blur-sm justify-between p-2 hidden md:flex rounded-xl sticky top-4">
+        <nav className="max-w-5xl mx-auto bg-bluev5/50 dark:bg-neutral-100/50 backdrop-blur-sm justify-between p-2 mb-2 hidden md:flex rounded-xl sticky top-4">
           <div className="flex gap-4 sm:gap-8 ">
             <MenuOption href={'#home'}>
               <House />
@@ -233,47 +233,19 @@ export default function App() {
               <h2 className="font-jet text-left text-xl text-sky-500 dark:text-blue-700">/Projetos</h2>
             </div>
 
-            <div className="flex-wrap">
-
-              <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-grayv6 shadow-md md:max-w-2xl">
-                <div className="md:flex">
-                  <div className="md:shrink-0">
-                    <img
-                      className="h-48 w-full object-cover md:h-full md:w-48"
-                      src={avatar}
-                      alt="Modern building architecture"
-                    />
-                  </div>
-                  <div className="p-8">
-                    <div className="text-sm font-extrabold font-jet tracking-wide text-sky-500 uppercase">Company retreats</div>
-                    <p className="mt-2 text-white text-sm font-jet">
-                      Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of
-                      places to do just that.
-                    </p>
-                    <div className="mt-4 flex gap-2 flex-wrap">
-                      <TagComponentProjects style="border border-react" text="React">
-                        <FaReact className="text-react size-4" />
-                      </TagComponentProjects>
-
-                      <TagComponentProjects style="border border-node" text="React">
-                        <FaNodeJs className="text-node size-4" />
-                      </TagComponentProjects>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+            <CardComponent style="mb-6"/>
+            <CardComponent style="mb-6"/>
+            <CardComponent/>
           </section>
 
-          <section className="flex justify-between flex-col md:flex-row gap-4 md:gap-0 bg-grayv6 dark:bg-gray-700 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
+          <section className="flex justify-between flex-col md:flex-row gap-4 md:gap-0 bg-grayv6 dark:bg-grayv7 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
             <div className="flex flex-col gap-4">
-              <a className="text-neutral-400 italic underline flex items-center gap-2" href="mailto:email@contato.henriquesantosdev@gmail.com">
-                <AtSign className="size-4"/>
+              <a className="text-neutral-400 dark:text-neutral-500 italic underline flex items-center gap-2" href="mailto:email@contato.henriquesantosdev@gmail.com">
+                <AtSign className="size-4" />
                 contato.henriquesantosdev@gmail.com
               </a>
-              <a className="text-neutral-400 italic underline flex items-center gap-2" href="/CV-henrique-santos-developer.pdf">
-                <FileDown className="size-4"/>
+              <a className="text-neutral-400 dark:text-neutral-500 italic underline flex items-center gap-2" href="/CV-henrique-santos-developer.pdf">
+                <FileDown className="size-4" />
                 Download CV
               </a>
             </div>
