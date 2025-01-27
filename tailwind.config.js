@@ -35,9 +35,8 @@ export default {
         graphql: '#F6009C',
       },
       backgroundImage: {
-        quadriculado: "url(/quadriclado.png)",
-        intro: "url(/Background_Intro.png)",
-        mobileV5: "url(/bg-mobile-v5-t.jpeg)",
+        pcv4: "url(/bg-pc-v4.webp)",
+        mobileV5: "url(/bg-mobile-v5-t.webp)",
       },
     },
   },

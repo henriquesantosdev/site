@@ -1,4 +1,5 @@
 import { Brain, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
+import avatar from '/avatar.webp'
 import { ButtonComponent } from './components/ButtonComponent'
 import { MenuOption } from "./components/MenuOption";
 import { TagComponent } from "./components/TagComponent";
@@ -109,7 +110,7 @@ export default function App() {
 
 
         <div className="max-w-6xl mx-auto">
-          <section id="home" className="bg-mobileV5 md:bg-intro bg-no-repeat bg-cover h-[calc(100vh-50px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+          <section id="home" className="bg-mobileV5 md:bg-pcv4 bg-no-repeat bg-cover h-[calc(100vh-50px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
             <div className="w-full md:w-5/12">
               <h1 className="text-white whitespace-nowrap font-bold text-[2.75rem]/10 md:text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
@@ -130,7 +131,7 @@ export default function App() {
 
             <div>
               <img
-                src="/avatar.png"
+                src={avatar}
                 alt="Imagem do desenvolvedor Henrique Santos"
                 className="w-44 md:w-56 rounded-xl border-4 border-solid border-zinc-800"
               />
