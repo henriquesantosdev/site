@@ -230,7 +230,7 @@ export default function App() {
                   <div className="md:shrink-0">
                     <img
                       className="h-48 w-full object-cover md:h-full md:w-48"
-                      src="/avatar.png"
+                      src={avatar}
                       alt="Modern building architecture"
                     />
                   </div>
