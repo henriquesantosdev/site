@@ -1,4 +1,4 @@
-import { Brain, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
+import { AtSign, Brain, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
 import avatar from '/avatar.webp'
 import { ButtonComponent } from './components/ButtonComponent'
 import { MenuOption } from "./components/MenuOption";
@@ -10,11 +10,14 @@ import { RiNextjsFill } from "react-icons/ri";
 import { GrGraphQl } from "react-icons/gr";
 import { useState } from "react";
 import { TagComponentProjects } from "./components/TagComponentProjects";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 export default function App() {
 
   const [darkMode, setDarkMode] = useState(true)
   const [showMenu, setShowMenu] = useState(false)
+
+  const [currentYear] = useState(new Date().getFullYear())
 
   const handleSetDarkMode = () => {
     const darkModeDiv = document.getElementById('dark-mode-div')
@@ -38,6 +41,7 @@ export default function App() {
 
   return (
     <div id="dark-mode-div" className="">
+      <SpeedInsights />
       <div className="bg-bluev5 dark:bg-neutral-100 p-2 md:p-4">
         <nav className="max-w-5xl mx-auto bg-bluev5/50 dark:bg-neutral-100/50 backdrop-blur-sm justify-between p-2 hidden md:flex rounded-xl sticky top-4">
           <div className="flex gap-4 sm:gap-8 ">
@@ -157,7 +161,7 @@ export default function App() {
             <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Skills</h2>
 
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
-              <TagComponent style="bg-react/2" text="React">
+              <TagComponent style="bg-react/20" text="React">
                 <FaReact className="text-react size-4" />
               </TagComponent>
 
@@ -262,8 +266,18 @@ export default function App() {
             </div>
           </section>
 
-          <section className="bg-grayv6 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
-            <p className="text-white">Made with 💙 by Henrique Santos</p>
+          <section className="flex justify-between flex-col md:flex-row gap-4 md:gap-0 bg-grayv6 dark:bg-gray-700 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
+            <div className="flex flex-col gap-4">
+              <a className="text-neutral-400 italic underline flex items-center gap-2" href="mailto:email@contato.henriquesantosdev@gmail.com">
+                <AtSign className="size-4"/>
+                contato.henriquesantosdev@gmail.com
+              </a>
+              <a className="text-neutral-400 italic underline flex items-center gap-2" href="/CV-henrique-santos-developer.pdf">
+                <FileDown className="size-4"/>
+                Download CV
+              </a>
+            </div>
+            <p className="text-neutral-400 italic">Henrique Santos Developer @{currentYear}</p>
           </section>
         </div>
       </div>
