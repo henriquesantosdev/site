@@ -9,6 +9,7 @@ import { SiNestjs } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { GrGraphQl } from "react-icons/gr";
 import { useState } from "react";
+import { TagComponentProjects } from "./components/TagComponentProjects";
 
 export default function App() {
 
@@ -16,10 +17,14 @@ export default function App() {
   const [showMenu, setShowMenu] = useState(false)
 
   const handleSetDarkMode = () => {
+    const darkModeDiv = document.getElementById('dark-mode-div')
+
     if (darkMode === true) {
       setDarkMode(false)
+      darkModeDiv?.classList.add('dark')
     } else {
       setDarkMode(true)
+      darkModeDiv?.classList.remove('dark')
     }
   }
 
@@ -32,9 +37,9 @@ export default function App() {
   }
 
   return (
-    <>
-      <div className="bg-bluev5 p-2 md:p-4">
-        <nav className="max-w-5xl mx-auto bg-bluev5/50 backdrop-blur-sm justify-between p-2 hidden md:flex rounded-xl sticky top-4">
+    <div id="dark-mode-div" className="">
+      <div className="bg-bluev5 dark:bg-neutral-100 p-2 md:p-4">
+        <nav className="max-w-5xl mx-auto bg-bluev5/50 dark:bg-neutral-100/50 backdrop-blur-sm justify-between p-2 hidden md:flex rounded-xl sticky top-4">
           <div className="flex gap-4 sm:gap-8 ">
             <MenuOption href={'#home'}>
               <House />
@@ -48,7 +53,7 @@ export default function App() {
 
             <MenuOption href={'#skils'}>
               <Brain />
-              <span>Habilidades</span>
+              <span>Skills</span>
             </MenuOption>
 
             <MenuOption href={'#projetos'}>
@@ -59,9 +64,9 @@ export default function App() {
 
           <div onClick={handleSetDarkMode} className="flex gap-4 items-center">
             {darkMode ? (
-              <CloudMoon className="text-grayv5 size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+              <CloudMoon className="text-grayv5 dark:text-gray-500 dark:hover:text-white size-10 hover:bg-sky-500 dark:hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
             ) : (
-              <CloudSun className="text-grayv5 size-10 hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+              <CloudSun className="text-grayv5 size-10 hover:bg-sky-500 dark:hover:bg-blue-600 dark:hover:text-white hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
             )}
           </div>
         </nav>
@@ -69,7 +74,7 @@ export default function App() {
         <div className="fixed bottom-5 right-5">
           <div className="flex items-end flex-col">
             {showMenu && (
-              <div className="bg-bluev5/50 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
+              <div className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
                 <MenuOption href={'#home'}>
                   <House className="text-white" />
                   <span className="text-white">Home</span>
@@ -82,7 +87,7 @@ export default function App() {
 
                 <MenuOption href={'#skills'}>
                   <Brain className="text-white" />
-                  <span className="text-white">Habilidades</span>
+                  <span className="text-white">Skills</span>
                 </MenuOption>
 
                 <MenuOption href={'#projetos'}>
@@ -92,15 +97,15 @@ export default function App() {
 
                 <div onClick={handleSetDarkMode} className="flex items-center">
                   {darkMode ? (
-                    <CloudMoon className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                    <CloudMoon className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 dark:border-blue-600 dark:hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
                   ) : (
-                    <CloudSun className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                    <CloudSun className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 dark:border-blue-600 dark:hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
                   )}
                 </div>
               </div>
             )}
 
-            <button onClick={handleShowMenu} className="bg-bluev5/50 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
+            <button onClick={handleShowMenu} className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
               <div className="flex gap-2 items-center">
                 <Menu className="text-white size-12" />
               </div>
@@ -142,16 +147,17 @@ export default function App() {
         <div className="max-w-3xl mx-auto mt-4">
 
           <section id="sobremim" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
-            <h2 className="font-jet text-xl text-left text-sky-500">/Sobre mim</h2>
-            <p className="font-jet text-lg text-left font-medium mt-4">
+            <h2 className="font-jet text-xl text-left text-sky-500 dark:text-blue-700">/Sobre mim</h2>
+            <p className="font-jet dark:text-sky-800 text-lg text-left font-medium mt-4">
               Desenvolvedor apaixonado por transformar ideias em realidade digital. Experiente em PHP, typescript, node e seus frameworks mais modernos, com habilidade comprovada em desenvolvimento web. Comprometido em criar soluções robustas e eficientes para atender às necessidades dos clientes. Em busca de oportunidades desafiadoras para expandir habilidades e contribuir para projetos inovadores.
             </p>
           </section>
 
           <section id="skills" className="mt-10 p-4 rounded-xl text-white font-bold">
-            <h2 className="font-jet text-left text-xl text-sky-500">/Skills</h2>
+            <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Skills</h2>
+
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
-              <TagComponent style="bg-react/20" text="React">
+              <TagComponent style="bg-react/2" text="React">
                 <FaReact className="text-react size-4" />
               </TagComponent>
 
@@ -186,7 +192,7 @@ export default function App() {
           </section>
 
           <section id="soft-skills" className="mt-4 p-4 rounded-xl text-white font-bold">
-            <h2 className="font-jet text-left text-xl text-sky-500">/Soft-skills</h2>
+            <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Soft-skills</h2>
             <div className="mt-4 flex justify-start gap-2 flex-wrap">
               <TagComponent style="bg-nextjs/20" text="Comunicação eficaz">
                 <MessageSquareText className="text-nextjs size-4" />
@@ -220,7 +226,7 @@ export default function App() {
 
           <section id="projetos" className="mt-10 p-4 rounded-xl text-2xl text-white font-bold">
             <div className="mb-4">
-              <h2 className="font-jet text-left text-xl text-sky-500">/Projetos</h2>
+              <h2 className="font-jet text-left text-xl text-sky-500 dark:text-blue-700">/Projetos</h2>
             </div>
 
             <div className="flex-wrap">
@@ -241,13 +247,13 @@ export default function App() {
                       places to do just that.
                     </p>
                     <div className="mt-4 flex gap-2 flex-wrap">
-                      <TagComponent style="border border-react" text="React">
+                      <TagComponentProjects style="border border-react" text="React">
                         <FaReact className="text-react size-4" />
-                      </TagComponent>
+                      </TagComponentProjects>
 
-                      <TagComponent style="border border-node" text="React">
+                      <TagComponentProjects style="border border-node" text="React">
                         <FaNodeJs className="text-node size-4" />
-                      </TagComponent>
+                      </TagComponentProjects>
                     </div>
                   </div>
                 </div>
@@ -261,6 +267,6 @@ export default function App() {
           </section>
         </div>
       </div>
-    </>
+    </div>
   )
 }
