@@ -116,7 +116,7 @@ export default function App() {
               <p className="text-sky-500 font-semibold text-2xl mt-4 md:mt-2 text-center md:text-left">Fullstack developer</p>
 
               <div className="flex gap-2 mt-8">
-                <ButtonComponent link="https://wa.me/5581996978021" target="_blank">
+                <ButtonComponent link="" target="_blank">
                   <Contact />
                   Contato
                 </ButtonComponent>
