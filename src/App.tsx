@@ -257,7 +257,7 @@ export default function App() {
           </section>
 
           <section className="bg-grayv6 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
-            <p>Made with 💙 by Henrique Santos</p>
+            <p className="text-white">Made with 💙 by Henrique Santos</p>
           </section>
         </div>
       </div>
