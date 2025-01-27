@@ -1,23 +1,20 @@
-import { AtSign, Brain, BrainCircuit, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Layers, Menu, MessageSquareText, RotateCcw, Split, TriangleAlert, User, Users } from "lucide-react";
+import { Brain, CloudMoon, CloudSun, Contact, FileDown, FolderCode, House, Menu, User} from "lucide-react";
 import avatar from '/avatar.webp'
 import { ButtonComponent } from './components/ButtonComponent'
 import { MenuOption } from "./components/MenuOption";
-import { TagComponent } from "./components/TagComponent";
-import { FaLaravel, FaNodeJs, FaPhp, FaReact } from "react-icons/fa";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiNestjs } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
-import { GrGraphQl } from "react-icons/gr";
 import { useState } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
-import { CardComponent } from "./components/CardComponent";
+import { SobreMim } from "./components/layout/SobreMim";
+import { Skills } from "./components/layout/Skills";
+import { SoftSkills } from "./components/layout/SoftSkills";
+import { Projects } from "./components/layout/Projects";
+import { Footer } from "./components/layout/Footer";
 
 export default function App() {
 
   const [darkMode, setDarkMode] = useState(true)
   const [showMenu, setShowMenu] = useState(false)
 
-  const [currentYear] = useState(new Date().getFullYear())
 
   const handleSetDarkMode = () => {
     const darkModeDiv = document.getElementById('dark-mode-div')
@@ -150,107 +147,15 @@ export default function App() {
 
         <div className="max-w-3xl mx-auto mt-4">
 
-          <section id="sobremim" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
-            <h2 className="font-jet text-xl text-left text-sky-500 dark:text-blue-700">/Sobre mim</h2>
-            <p className="font-jet dark:text-sky-800 text-lg text-left font-medium mt-4">
-              Desenvolvedor apaixonado por transformar ideias em realidade digital. Experiente em PHP, typescript, node e seus frameworks mais modernos, com habilidade comprovada em desenvolvimento web. Comprometido em criar soluções robustas e eficientes para atender às necessidades dos clientes. Em busca de oportunidades desafiadoras para expandir habilidades e contribuir para projetos inovadores.
-            </p>
-          </section>
+          <SobreMim/>
 
-          <section id="skills" className="mt-10 p-4 rounded-xl text-white font-bold">
-            <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Skills</h2>
+          <Skills/>
 
-            <div className="mt-4 flex justify-start gap-2 flex-wrap">
-              <TagComponent style="bg-react/20" text="React">
-                <FaReact className="text-react size-4" />
-              </TagComponent>
+          <SoftSkills/>
 
-              <TagComponent style="bg-typescript/20" text="Typescript">
-                <BiLogoTypescript className="text-typescript size-4" />
-              </TagComponent>
+          <Projects/>
 
-              <TagComponent style="bg-node/20" text="Node">
-                <FaNodeJs className="text-node size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nestjs/20" text="Nestjs">
-                <SiNestjs className="text-nestjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nextjs/20" text="Nextjs">
-                <RiNextjsFill className="text-nextjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-php/20" text="Php">
-                <FaPhp className="text-php size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-laravel/20" text="Laravel">
-                <FaLaravel className="text-laravel size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-graphql/20" text="Graphql">
-                <GrGraphQl className="text-graphql size-4" />
-              </TagComponent>
-            </div>
-          </section>
-
-          <section id="soft-skills" className="mt-4 p-4 rounded-xl text-white font-bold">
-            <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Soft-skills</h2>
-            <div className="mt-4 flex justify-start gap-2 flex-wrap">
-              <TagComponent style="bg-nextjs/20" text="Comunicação eficaz">
-                <MessageSquareText className="text-nextjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nextjs/20" text="Trabalho em equipe">
-                <Users className="text-nextjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nextjs/20" text="Resolução de problemas">
-                <TriangleAlert className="text-nextjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nextjs/20" text="Adaptabilidade">
-                <RotateCcw className="text-nextjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nextjs/20" text="Pensamento crítico">
-                <BrainCircuit className="text-nextjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nextjs/20" text="Organização">
-                <Layers className="text-nextjs size-4" />
-              </TagComponent>
-
-              <TagComponent style="bg-nextjs/20" text="Proatividade">
-                <Split className="text-nextjs size-4" />
-              </TagComponent>
-            </div>
-          </section>
-
-          <section id="projetos" className="mt-10 p-4 rounded-xl text-2xl text-white font-bold">
-            <div className="mb-4">
-              <h2 className="font-jet text-left text-xl text-sky-500 dark:text-blue-700">/Projetos</h2>
-            </div>
-
-            <CardComponent style="mb-6"/>
-            <CardComponent style="mb-6"/>
-            <CardComponent/>
-          </section>
-
-          <section className="flex justify-between flex-col md:flex-row gap-4 md:gap-0 bg-grayv6 dark:bg-grayv7 mt-10 p-4 rounded-xl text-zinc-500 font-normal">
-            <div className="flex flex-col gap-4">
-              <a className="text-neutral-400 dark:text-neutral-500 italic underline flex items-center gap-2" href="mailto:email@contato.henriquesantosdev@gmail.com">
-                <AtSign className="size-4" />
-                contato.henriquesantosdev@gmail.com
-              </a>
-              <a className="text-neutral-400 dark:text-neutral-500 italic underline flex items-center gap-2" href="/CV-henrique-santos-developer.pdf">
-                <FileDown className="size-4" />
-                Download CV
-              </a>
-            </div>
-            <p className="text-neutral-400 italic">Henrique Santos Developer @{currentYear}</p>
-          </section>
+          <Footer/>
         </div>
       </div>
     </div>
