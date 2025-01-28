@@ -10,7 +10,7 @@ export const Projects = () => {
         <h2 className="flex items-center gap-4 font-jet text-left text-xl text-sky-500 dark:text-blue-700">
           /Projetos
           <TagComponentAlert style="border border-sky-500 dark:text-blue-700 dark:border-blue-700" text="Clique para ver projeto">
-            <MousePointerClick className="size-5"/>
+            <MousePointerClick className="size-4"/>
           </TagComponentAlert>
         </h2>
       </div>

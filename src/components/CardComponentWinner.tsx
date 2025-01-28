@@ -17,7 +17,7 @@ export const CardComponentWinner = () => {
             />
           </div>
           <div className="p-8">
-            <div className="text-lg text-yellow-400 flex items-center gap-4 font-extrabold font-jet tracking-wide uppercase">
+            <div className="text-lg text-yellow-400 flex flex-wrap-reverse items-center gap-4 font-extrabold font-jet tracking-wide uppercase">
               GeoInsights
               <TagComponentProjects style="border border-yellow-400 text-white" text="Projeto premiado">
                 <Trophy className="text-yellow-400 size-4" />
