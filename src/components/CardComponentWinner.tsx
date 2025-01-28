@@ -25,8 +25,7 @@ export const CardComponentWinner = () => {
             </div>
 
             <p className="mt-2 text-white text-sm font-jet">
-              Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of
-              places to do just that.
+            Aplicação estratégica para mapear a presença geográfica de empresas e concorrentes, identificando oportunidades e auxiliando decisões com dados registrados e monitorados.
             </p>
 
             <div className="mt-4 flex gap-2 flex-wrap">
