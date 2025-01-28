@@ -1,12 +1,11 @@
 import { SpeedInsights } from "@vercel/speed-insights/react"
-import SobreMim from "./components/layout/SobreMim";
-import Skills from "./components/layout/Skills";
-import SoftSkills from "./components/layout/SoftSkills";
-import Projects from "./components/layout/Projects";
-import Footer from "./components/layout/Footer";
+import { SobreMim } from "./components/layout/SobreMim";
+import { Skills } from "./components/layout/Skills";
+import { SoftSkills } from "./components/layout/SoftSkills";
+import { Projects } from "./components/layout/Projects";
+import { Footer } from "./components/layout/Footer";
 import { MenuComponent } from "./components/layout/MenuComponent";
 import { lazy, Suspense } from "react";
-import loading from '/loading.mov'
 
 const HomeComponent = lazy(() => import("./components/layout/HomeComponent"))
 
@@ -19,7 +18,7 @@ export default function App() {
         <MenuComponent />
 
         <div className="max-w-6xl mx-auto">
-          <Suspense fallback={loading}>
+          <Suspense fallback={'Carregando...'}>
             <HomeComponent />
           </Suspense>
         </div>

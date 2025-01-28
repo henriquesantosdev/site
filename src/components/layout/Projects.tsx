@@ -1,6 +1,6 @@
 import { CardComponent } from "../CardComponent"
 
-const Projects = () => {
+export const Projects = () => {
   return (
     <section id="projetos" className="mt-10 p-4 rounded-xl text-2xl text-white font-bold">
       <div className="mb-4">
@@ -13,5 +13,3 @@ const Projects = () => {
     </section>
   )
 }
-
-export default Projects
