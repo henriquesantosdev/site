@@ -2,7 +2,7 @@ import { Contact, FileDown } from "lucide-react"
 import { ButtonComponent } from "../ButtonComponent"
 import avatar from '/avatar.webp'
 
-const HomeComponent = () => {
+export const HomeComponent = () => {
   return (
     <section id="home" className="bg-pcv4 bg-no-repeat bg-cover h-[calc(100vh-50px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
 
@@ -33,5 +33,3 @@ const HomeComponent = () => {
     </section>
   )
 }
-
-export default HomeComponent
