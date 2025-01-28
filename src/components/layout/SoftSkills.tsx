@@ -1,7 +1,7 @@
 import { BrainCircuit, Layers, MessageSquareText, RotateCcw, Split, TriangleAlert, Users } from "lucide-react"
 import { TagComponent } from "../TagComponent"
 
-export const SoftSkills = () => {
+const SoftSkills = () => {
   return (
     <section id="soft-skills" className="mt-4 p-4 rounded-xl text-white font-bold">
       <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Soft-skills</h2>
@@ -37,3 +37,5 @@ export const SoftSkills = () => {
     </section>
   )
 }
+
+export default SoftSkills

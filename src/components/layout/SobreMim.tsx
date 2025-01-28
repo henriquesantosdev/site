@@ -1,4 +1,4 @@
-export const SobreMim = () => {
+const SobreMim = () => {
   return (
     <section id="sobremim" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
       <h2 className="font-jet text-xl text-left text-sky-500 dark:text-blue-700">/Sobre mim</h2>
@@ -8,3 +8,5 @@ export const SobreMim = () => {
     </section>
   )
 }
+
+export default SobreMim

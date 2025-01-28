@@ -1,7 +1,7 @@
 import { AtSign, FileDown } from "lucide-react"
 import { useState } from "react"
 
-export const Footer = () => {
+const Footer = () => {
   const [currentYear] = useState(new Date().getFullYear())
 
   return (
@@ -20,3 +20,5 @@ export const Footer = () => {
     </section>
   )
 }
+
+export default Footer
