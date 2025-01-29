@@ -1,4 +1,4 @@
-import { Brain, CloudMoon, CloudSun, FolderCode, House, Menu, User } from "lucide-react";
+import { Brain, CloudMoon, CloudSun, Contact, FolderCode, House, Menu, User } from "lucide-react";
 import { MenuOption } from "../MenuOption";
 import { useState } from "react";
 
@@ -50,6 +50,11 @@ export const MenuComponent = () => {
             <FolderCode />
             <span>Projetos</span>
           </MenuOption>
+
+          <MenuOption href={'#projetos'}>
+            <Contact />
+            <span>Contato</span>
+          </MenuOption>
         </div>
 
         <div onClick={handleSetDarkMode} className="flex gap-4 items-center">
@@ -83,6 +88,11 @@ export const MenuComponent = () => {
               <MenuOption href={'#projetos'}>
                 <FolderCode className="text-white" />
                 <span className="text-white">Projetos</span>
+              </MenuOption>
+
+              <MenuOption href={'#projetos'}>
+                <Contact className="text-white" />
+                <span className="text-white">Contato</span>
               </MenuOption>
 
               <div onClick={handleSetDarkMode} className="flex items-center">

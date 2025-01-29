@@ -1,5 +1,4 @@
 import { MousePointerClick } from "lucide-react"
-import { CardComponent } from "../CardComponent"
 import { CardComponentWinner } from "../CardComponentWinner"
 import { TagComponentAlert } from "../TagComponentAlert"
 
@@ -16,8 +15,7 @@ export const Projects = () => {
       </div>
 
       <CardComponentWinner />
-      <CardComponent style="mb-6" />
-      <CardComponent />
+      <p className="text-sky-500 dark:text-blue-700 text-base font-jet text-center">Mais projetos em breve...</p>
     </section>
   )
 }

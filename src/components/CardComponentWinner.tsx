@@ -1,25 +1,25 @@
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { TagComponentProjects } from "./TagComponentProjects";
-import avatar from '/avatar.webp'
+import Geoinsights from '/geoinsights.webp'
 import { Trophy } from "lucide-react";
 
 export const CardComponentWinner = () => {
   return (
     <a href="https://github.com/henriquesantosdev/geoInsights" target="_blank">
-      <div className="mx-auto mb-6 overflow-hidden rounded-xl bg-orange-950 border-2 dark:border-yellow-500 dark:border-4 border-yellow-400 shadow-md">
+      <div className="mx-auto mb-6 overflow-hidden rounded-xl bg-orange-950 border-2 dark:border-yellow-500 border-yellow-400 shadow-md">
         <div className="md:flex">
 
           <div className="md:shrink-0">
             <img
               className="h-48 w-full object-cover md:h-full md:w-48"
-              src={avatar}
+              src={Geoinsights}
               alt="Modern building architecture"
             />
           </div>
           <div className="p-8">
             <div className="text-lg text-yellow-400 flex flex-wrap-reverse items-center gap-4 font-extrabold font-jet tracking-wide uppercase">
               GeoInsights
-              <TagComponentProjects style="border border-yellow-400 text-white" text="Premiado em hackathon">
+              <TagComponentProjects style="border border-yellow-400 text-white" text="Projeto premiado">
                 <Trophy className="text-yellow-400 size-4" />
               </TagComponentProjects>
             </div>

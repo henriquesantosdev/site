@@ -37,8 +37,7 @@ export default {
         graphql: '#F6009C',
       },
       backgroundImage: {
-        pcv4: "url(/bg-pc-v4.webp)",
-        mobileV5: "url(/bg-mobile-v5-t.webp)",
+        pcv4: "url(/bg-v4-compress.webp)",
       },
     },
   },

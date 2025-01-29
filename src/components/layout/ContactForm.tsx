@@ -43,7 +43,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="sobremim" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
+    <section id="contato" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
       <h2 className="font-jet text-xl text-left text-sky-500 dark:text-blue-700">/Vamos trabalhar juntos?</h2>
 
       <div>
