@@ -2,7 +2,7 @@ import { FaLaravel, FaNodeJs, FaPhp, FaReact } from "react-icons/fa"
 import { TagComponent } from "../TagComponent"
 import { BiLogoTypescript } from "react-icons/bi"
 import { SiNestjs } from "react-icons/si"
-import { RiNextjsFill } from "react-icons/ri"
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
 import { GrGraphQl } from "react-icons/gr"
 
 export const Skills = () => {
@@ -15,14 +15,6 @@ export const Skills = () => {
           <FaReact className="text-react size-4" />
         </TagComponent>
 
-        <TagComponent style="bg-typescript/20" text="Typescript">
-          <BiLogoTypescript className="text-typescript size-4" />
-        </TagComponent>
-
-        <TagComponent style="bg-node/20" text="Node">
-          <FaNodeJs className="text-node size-4" />
-        </TagComponent>
-
         <TagComponent style="bg-nestjs/20" text="Nestjs">
           <SiNestjs className="text-nestjs size-4" />
         </TagComponent>
@@ -31,17 +23,30 @@ export const Skills = () => {
           <RiNextjsFill className="text-nextjs size-4" />
         </TagComponent>
 
-        <TagComponent style="bg-php/20" text="Php">
-          <FaPhp className="text-php size-4" />
+        <TagComponent style="bg-typescript/20" text="Typescript">
+          <BiLogoTypescript className="text-typescript size-4" />
+        </TagComponent>
+
+        <TagComponent style="bg-node/20" text="Node">
+          <FaNodeJs className="text-node size-4" />
+        </TagComponent>
+
+        <TagComponent style="bg-tailwind/20" text="Tailwind">
+          <RiTailwindCssFill className="text-tailwind size-4" />
         </TagComponent>
 
         <TagComponent style="bg-laravel/20" text="Laravel">
           <FaLaravel className="text-laravel size-4" />
         </TagComponent>
 
+        <TagComponent style="bg-php/20" text="Php">
+          <FaPhp className="text-php size-4" />
+        </TagComponent>
+
         <TagComponent style="bg-graphql/20" text="Graphql">
           <GrGraphQl className="text-graphql size-4" />
         </TagComponent>
+
       </div>
     </section>
   )

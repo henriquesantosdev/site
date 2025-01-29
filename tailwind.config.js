@@ -35,6 +35,7 @@ export default {
         php: '#4F5B93',
         laravel: '#FF2D20',
         graphql: '#F6009C',
+        tailwind: '#00BCFF',
 
         linkedin: '#0A66C2',
       },

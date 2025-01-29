@@ -2,6 +2,7 @@ import { FaNodeJs, FaReact } from "react-icons/fa";
 import { TagComponentProjects } from "./TagComponentProjects";
 import Geoinsights from '/geoinsights.webp'
 import { Trophy } from "lucide-react";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 export const CardComponentWinner = () => {
   return (
@@ -36,6 +37,10 @@ export const CardComponentWinner = () => {
 
               <TagComponentProjects style="border border-node" text="Node">
                 <FaNodeJs className="text-node size-4" />
+              </TagComponentProjects>
+
+              <TagComponentProjects style="border border-tailwind" text="Tailwind">
+                <RiTailwindCssFill className="text-tailwind size-4" />
               </TagComponentProjects>
             </div>
           </div>

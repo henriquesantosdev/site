@@ -1,7 +1,6 @@
-import { MousePointerClick } from "lucide-react"
+import { Construction, MousePointerClick } from "lucide-react"
 import { CardComponentWinner } from "../CardComponentWinner"
 import { TagComponentAlert } from "../TagComponentAlert"
-import { CardComponent } from "../CardComponent"
 
 export const Projects = () => {
   return (
@@ -10,14 +9,16 @@ export const Projects = () => {
         <h2 className="flex items-center gap-4 font-jet text-left text-xl text-sky-500 dark:text-blue-700">
           /Projetos
           <TagComponentAlert style="border border-sky-500 dark:text-blue-700 dark:border-blue-700" text="Clique para ver projeto">
-            <MousePointerClick className="size-4"/>
+            <MousePointerClick className="size-4" />
           </TagComponentAlert>
         </h2>
       </div>
 
       <CardComponentWinner />
-      <CardComponent style="mb-4"/>
-      <p className="text-sky-500 dark:text-blue-700 text-base font-jet text-center">Mais projetos em breve...</p>
+      <div className="text-sky-500 dark:text-blue-700 flex gap-4 justify-center">
+        <Construction className="size-5"/>
+        <p className=" text-sm font-jet">Mais projetos em desenvolvimento</p>
+      </div>
     </section>
   )
 }
