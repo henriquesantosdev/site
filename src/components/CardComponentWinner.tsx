@@ -14,6 +14,7 @@ export const CardComponentWinner = () => {
               className="h-48 w-full object-cover md:h-full md:w-48"
               src={Geoinsights}
               alt="Modern building architecture"
+              loading="lazy"
             />
           </div>
           <div className="p-8">

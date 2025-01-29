@@ -35,6 +35,8 @@ export default {
         php: '#4F5B93',
         laravel: '#FF2D20',
         graphql: '#F6009C',
+
+        linkedin: '#0A66C2',
       },
       backgroundImage: {
         pcv4: "url(/bg-v4-compress.webp)",

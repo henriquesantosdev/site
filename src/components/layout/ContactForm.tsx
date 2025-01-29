@@ -1,5 +1,6 @@
 import { Send } from "lucide-react"
 import { useState } from "react";
+import { FaLinkedin } from "react-icons/fa";
 
 export const ContactForm = () => {
 
@@ -43,7 +44,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contato" className="mt-10 p-4 rounded-xl text-white font-bold flex flex-col">
+    <section id="contato" className="mt-8 p-4 rounded-xl text-white font-bold flex flex-col">
       <h2 className="font-jet text-xl text-left text-sky-500 dark:text-blue-700">/Vamos trabalhar juntos?</h2>
 
       <div>
@@ -74,7 +75,7 @@ export const ContactForm = () => {
 
           <button
             type="submit"
-            className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-bluev7 font-semibold px-4 py-3 gap-2 w-full rounded-lg flex items-center justify-center">
+            className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-bluev7 font-semibold font-jet p-4 gap-2 w-full rounded-lg flex items-center justify-center">
             <Send className="size-5" />
             Enviar
           </button>
@@ -85,7 +86,17 @@ export const ContactForm = () => {
             <p>Contato enviado com sucesso!</p>
           )}
         </div>
+      </div>
 
+      <div>
+        <p className="font-jet text-2xl text-center dark:text-bluev7">ou</p>
+      </div>
+
+      <div className="flex flex-col mt-4">
+        <a href="https://www.linkedin.com/in/henrique-santos-497b0026a/" target="_blank" className="font-jet bg-linkedin w-full p-4 rounded-lg flex items-center justify-center gap-2">
+          <FaLinkedin className="size-6" />
+          <span>Linkedin</span>
+        </a>
       </div>
     </section>
   )
