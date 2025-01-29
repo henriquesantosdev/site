@@ -95,7 +95,7 @@ export const MenuComponent = () => {
             </div>
           )}
 
-          <button onClick={handleShowMenu} className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
+          <button name="menu" onClick={handleShowMenu} className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
             <div className="flex gap-2 items-center">
               <Menu className="text-white size-12" />
             </div>

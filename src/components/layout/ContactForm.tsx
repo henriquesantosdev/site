@@ -74,7 +74,7 @@ export const ContactForm = () => {
 
           <button
             type="submit"
-            className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-white font-semibold px-4 py-3 gap-2 w-full rounded-lg flex items-center justify-center">
+            className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-bluev7 font-semibold px-4 py-3 gap-2 w-full rounded-lg flex items-center justify-center">
             <Send className="size-5" />
             Enviar
           </button>
