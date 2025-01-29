@@ -25,6 +25,7 @@ export default {
         bluev4: '#171F2D',
         bluev5: '#000319',
         bluev6: '#00083f',
+        bluev7: '#091436',
 
         react: '#00FFFF',
         typescript: '#2D79C7',

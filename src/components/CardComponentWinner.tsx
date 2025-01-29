@@ -33,7 +33,7 @@ export const CardComponentWinner = () => {
                 <FaReact className="text-react size-4" />
               </TagComponentProjects>
 
-              <TagComponentProjects style="border border-node" text="React">
+              <TagComponentProjects style="border border-node" text="Node">
                 <FaNodeJs className="text-node size-4" />
               </TagComponentProjects>
             </div>

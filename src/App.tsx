@@ -7,6 +7,7 @@ import { Projects } from "./components/layout/Projects";
 import { Footer } from "./components/layout/Footer";
 import { MenuComponent } from "./components/layout/MenuComponent";
 import { HomeComponent } from "./components/layout/HomeComponent";
+import { ContactForm } from "./components/layout/ContactForm";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Skills />
           <SoftSkills />
           <Projects />
+          <ContactForm/>
           <Footer />
         </div>
 
