@@ -4,7 +4,7 @@ import avatar from '/avatar.webp'
 
 export const HomeComponent = () => {
   return (
-    <section id="home" className="bg-pcv4 bg-no-repeat bg-cover h-[calc(100vh-50px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-6 rounded-xl">
+    <section id="home" className="bg-pcv4 bg-no-repeat bg-cover h-[calc(100vh-80px)] md:h-[500px] bg-center flex flex-col-reverse items-center gap-10 md:gap-24 justify-center md:flex-row p-4 rounded-xl">
 
       <div className="w-full md:w-5/12">
         <h1 className="text-white whitespace-nowrap font-bold text-[2.75rem]/10 md:text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
