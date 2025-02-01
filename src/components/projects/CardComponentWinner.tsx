@@ -1,5 +1,5 @@
 import { FaNodeJs, FaReact } from "react-icons/fa";
-import { TagComponentProjects } from "./TagComponentProjects";
+import { TagComponentProjects } from "../TagComponentProjects";
 import Geoinsights from '/geoinsights.webp'
 import { Trophy } from "lucide-react";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -21,13 +21,13 @@ export const CardComponentWinner = () => {
           <div className="p-8">
             <div className="text-lg text-yellow-400 flex flex-wrap-reverse items-center gap-4 font-extrabold font-jet tracking-wide uppercase">
               GeoInsights
-              <TagComponentProjects style="border border-yellow-400 text-white" text="Projeto premiado">
+              <TagComponentProjects style="border border-yellow-400 text-white" text="Premiado em hackathon">
                 <Trophy className="text-yellow-400 size-4" />
               </TagComponentProjects>
             </div>
 
             <p className="mt-2 text-white text-sm font-jet">
-            Aplicação estratégica para mapear a presença geográfica de empresas e concorrentes, identificando oportunidades e auxiliando decisões com dados registrados e monitorados.
+              Aplicação estratégica para mapear a presença geográfica de empresas e concorrentes, identificando oportunidades e auxiliando decisões com dados registrados e monitorados.
             </p>
 
             <div className="mt-4 flex gap-2 flex-wrap">

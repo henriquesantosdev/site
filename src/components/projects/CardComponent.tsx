@@ -1,5 +1,5 @@
 import { FaNodeJs, FaReact } from "react-icons/fa";
-import { TagComponentProjects } from "./TagComponentProjects";
+import { TagComponentProjects } from "../TagComponentProjects";
 import avatar from '/avatar.webp'
 
 interface CardComponent {
