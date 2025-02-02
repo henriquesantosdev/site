@@ -5,7 +5,7 @@ import { CardComponentSmartMoney } from "../projects/CardComponentSmartMoney"
 
 export const Projects = () => {
   return (
-    <section id="projetos" className="mt-10 p-4 rounded-xl text-2xl text-white font-bold">
+    <section id="projetos" className="mt-10 p-4 rounded-xl text-2xl text-white font-bold scroll-mt-20">
       <div className="mb-6">
         <h2 className="flex items-center gap-4 font-jet text-left text-xl text-sky-500 dark:text-blue-700">
           /Projetos

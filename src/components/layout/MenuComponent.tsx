@@ -41,7 +41,7 @@ export const MenuComponent = () => {
             <span>Sobre mim</span>
           </MenuOption>
 
-          <MenuOption href={'#skils'}>
+          <MenuOption href={'#skills'}>
             <Brain />
             <span>Skills</span>
           </MenuOption>
@@ -51,7 +51,7 @@ export const MenuComponent = () => {
             <span>Projetos</span>
           </MenuOption>
 
-          <MenuOption href={'#projetos'}>
+          <MenuOption href={'#contato'}>
             <Contact />
             <span>Contato</span>
           </MenuOption>

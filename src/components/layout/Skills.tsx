@@ -7,7 +7,7 @@ import { GrGraphQl } from "react-icons/gr"
 
 export const Skills = () => {
   return (
-    <section id="skills" className="mt-10 p-4 rounded-xl text-white font-bold">
+    <section id="skills" className="mt-10 p-4 rounded-xl text-white font-bold scroll-mt-20">
       <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Skills</h2>
 
       <div className="mt-4 flex justify-start gap-2 flex-wrap">

@@ -3,7 +3,7 @@ import { TagComponent } from "../TagComponent"
 
 export const SoftSkills = () => {
   return (
-    <section id="soft-skills" className="mt-4 p-4 rounded-xl text-white font-bold">
+    <section id="soft-skills" className="mt-4 p-4 rounded-xl text-white font-bold scroll-mt-20">
       <h2 className="font-jet dark:text-blue-700 text-left text-xl text-sky-500">/Soft-skills</h2>
       <div className="mt-4 flex justify-start gap-2 flex-wrap">
         <TagComponent style="bg-nextjs/20" text="Comunicação eficaz">

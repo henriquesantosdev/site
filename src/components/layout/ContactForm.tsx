@@ -59,7 +59,7 @@ export const ContactForm = () => {
               type="text"
               name="name"
               placeholder="Nome"
-              className="p-4 w-full rounded-md font-jet bg-bluev7 placeholder:text-sky-800 placeholder:font-jet placeholder:font-normal text-sky-500 focus:outline-none focus:outline-1 focus:outline-sky-500 focus:outline-offset-2"
+              className="p-4 w-full rounded-md font-jet bg-bluev7 dark:bg-blue-200 placeholder:text-sky-800 placeholder:font-jet placeholder:font-normal dark:placeholder:text-blue-400 text-sky-500 focus:outline-none focus:outline-1 focus:outline-sky-500 focus:outline-offset-2"
             />
 
             <input
@@ -67,7 +67,7 @@ export const ContactForm = () => {
               type="email"
               name="email"
               placeholder="E-mail"
-              className="p-4 w-full rounded-md font-jet bg-bluev7 placeholder:text-sky-300/30 placeholder:font-jet placeholder:font-normal text-sky-500 focus:outline-none focus:outline-1 focus:outline-sky-500 focus:outline-offset-2"
+              className="p-4 w-full rounded-md font-jet bg-bluev7 dark:bg-blue-200 placeholder:text-sky-300/30 placeholder:font-jet placeholder:font-normal text-sky-500 dark:placeholder:text-blue-400 focus:outline-none focus:outline-1 focus:outline-sky-500 focus:outline-offset-2"
             />
           </div>
 
@@ -75,7 +75,7 @@ export const ContactForm = () => {
             required
             name="message"
             placeholder="Mensagem"
-            className="p-4 h-36 w-full rounded-md font-jet bg-bluev7 placeholder:text-sky-300/30 placeholder:font-jet placeholder:font-normal text-sky-500 focus:outline-none focus:outline-1 focus:outline-sky-500 focus:outline-offset-2">
+            className="p-4 h-36 w-full rounded-md font-jet bg-bluev7 dark:bg-blue-200 placeholder:text-sky-300/30 placeholder:font-jet placeholder:font-normal text-sky-500 dark:placeholder:text-blue-400 focus:outline-none focus:outline-1 focus:outline-sky-500 focus:outline-offset-2">
           </textarea>
 
           {successAlert ? (
