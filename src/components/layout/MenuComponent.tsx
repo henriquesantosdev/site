@@ -90,7 +90,7 @@ export const MenuComponent = () => {
                 <span className="text-white">Projetos</span>
               </MenuOption>
 
-              <MenuOption href={'#projetos'}>
+              <MenuOption href={'#contato'}>
                 <Contact className="text-white" />
                 <span className="text-white">Contato</span>
               </MenuOption>
