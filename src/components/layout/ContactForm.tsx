@@ -1,10 +1,12 @@
-import { Send } from "lucide-react"
+import { Check, Send } from "lucide-react"
 import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
+import ringSpin from "/90-ring-spin.svg"
 
 export const ContactForm = () => {
 
   const [successAlert, setSuccessAlert] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const submitContactForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -23,6 +25,7 @@ export const ContactForm = () => {
     };
 
     try {
+      setLoading(true)
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
@@ -32,11 +35,12 @@ export const ContactForm = () => {
       });
 
       if (response.ok) {
+        setLoading(false)
         setSuccessAlert(true)
         form.reset();
       } else {
+        setLoading(false)
         setSuccessAlert(false)
-        alert("Erro ao enviar o contato. Tente novamente.");
       }
     } catch (error) {
       console.error("Erro ao enviar o contato:", error);
@@ -74,18 +78,35 @@ export const ContactForm = () => {
             className="p-4 h-36 w-full rounded-md font-jet bg-bluev7 placeholder:text-sky-300/30 placeholder:font-jet placeholder:font-normal text-sky-500 focus:outline-none focus:outline-1 focus:outline-sky-500 focus:outline-offset-2">
           </textarea>
 
-          <button
-            type="submit"
-            className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-bluev7 font-semibold font-jet p-4 gap-2 w-full rounded-lg flex items-center justify-center">
-            <Send className="size-5" />
-            Enviar
-          </button>
+          {successAlert ? (
+            <button
+              type="submit"
+              className="bg-green-500 hover:bg-green-600 dark:hover:bg-green-700 dark:bg-green-600 dark:text-white hover:text-white transition duration-100 text-green-900 font-semibold font-jet p-4 w-full rounded-lg flex gap-2 items-center justify-center">
+              <Check className="size-5" />
+              <span>Enviado com sucesso</span>
+            </button>
+          ) : (
+
+            <button
+              type="submit"
+              className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-bluev7 font-semibold font-jet p-4 w-full rounded-lg flex gap-2 items-center justify-center">
+              {loading ? (
+                <div className="flex gap-2 text-white">
+                  <img src={ringSpin} alt="loading icon" />
+                  <span>Enviando...</span>
+                </div>
+              ) : (
+                <div className="flex gap-2">
+                  <Send className="size-5" />
+                  <span>Enviar</span>
+                </div>
+              )}
+            </button>
+          )}
+
         </form>
 
         <div className="text-green-500 mt-4 text-center">
-          {successAlert && (
-            <p>Contato enviado com sucesso!</p>
-          )}
         </div>
       </div>
 
