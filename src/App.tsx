@@ -8,7 +8,6 @@ import { Footer } from "./components/layout/Footer";
 import { MenuComponent } from "./components/layout/MenuComponent";
 import { HomeComponent } from "./components/layout/HomeComponent";
 import { ContactForm } from "./components/layout/ContactForm";
-// import { CertificatesCarousel } from "./components/carousel/CertificatesCarousel";
 
 export default function App() {
   return (
@@ -27,7 +26,6 @@ export default function App() {
           <SoftSkills />
           <Projects />
           <ContactForm/>
-          {/* <CertificatesCarousel/> */}
           <Footer />
         </div>
 
