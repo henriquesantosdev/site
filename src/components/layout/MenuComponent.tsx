@@ -76,40 +76,40 @@ export const MenuComponent = () => {
                 key="modal"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}>
-                <div className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl">
-                  <MenuOption href={'#home'}>
-                    <House className="text-white" />
-                    <span className="text-white">Home</span>
-                  </MenuOption>
+                exit={{ opacity: 0, scale: 0 }}
+                className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm flex flex-col gap-4 p-4 rounded-xl"
+              >
+                <MenuOption href={'#home'}>
+                  <House className="text-white" />
+                  <span className="text-white">Home</span>
+                </MenuOption>
 
-                  <MenuOption href={'#sobremim'}>
-                    <User className="text-white" />
-                    <span className="text-white">Sobre mim</span>
-                  </MenuOption>
+                <MenuOption href={'#sobremim'}>
+                  <User className="text-white" />
+                  <span className="text-white">Sobre mim</span>
+                </MenuOption>
 
-                  <MenuOption href={'#skills'}>
-                    <Brain className="text-white" />
-                    <span className="text-white">Skills</span>
-                  </MenuOption>
+                <MenuOption href={'#skills'}>
+                  <Brain className="text-white" />
+                  <span className="text-white">Skills</span>
+                </MenuOption>
 
-                  <MenuOption href={'#projetos'}>
-                    <FolderCode className="text-white" />
-                    <span className="text-white">Projetos</span>
-                  </MenuOption>
+                <MenuOption href={'#projetos'}>
+                  <FolderCode className="text-white" />
+                  <span className="text-white">Projetos</span>
+                </MenuOption>
 
-                  <MenuOption href={'#contato'}>
-                    <Contact className="text-white" />
-                    <span className="text-white">Contato</span>
-                  </MenuOption>
+                <MenuOption href={'#contato'}>
+                  <Contact className="text-white" />
+                  <span className="text-white">Contato</span>
+                </MenuOption>
 
-                  <div onClick={handleSetDarkMode} className="flex items-center">
-                    {darkMode ? (
-                      <CloudMoon className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 dark:border-blue-600 dark:hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
-                    ) : (
-                      <CloudSun className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 dark:border-blue-600 dark:hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
-                    )}
-                  </div>
+                <div onClick={handleSetDarkMode} className="flex items-center">
+                  {darkMode ? (
+                    <CloudMoon className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 dark:border-blue-600 dark:hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                  ) : (
+                    <CloudSun className="text-white size-11 border border-sky-500 rounded-lg hover:border-none hover:bg-sky-500 dark:border-blue-600 dark:hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:rounded-lg p-2" />
+                  )}
                 </div>
               </motion.div>
             )}
@@ -119,12 +119,12 @@ export const MenuComponent = () => {
           <motion.button
             whileTap={{ y: 3 }}
             onClick={handleShowMenu}
+            name="menu"
+            className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden"
           >
-            <button name="menu" className="bg-bluev5/50 dark:bg-gray-800/70 backdrop-blur-sm p-2 mt-4 rounded-xl md:hidden">
-              <div className="flex gap-2 items-center">
-                <Menu className="text-white size-12" />
-              </div>
-            </button>
+            <div className="flex gap-2 items-center">
+              <Menu className="text-white size-12" />
+            </div>
           </motion.button>
         </div>
       </div>

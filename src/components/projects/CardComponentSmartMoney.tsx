@@ -1,6 +1,6 @@
 import { FaReact } from "react-icons/fa";
 import { TagComponentProjects } from "../TagComponentProjects";
-import avatar from '/avatar.webp'
+import avatar from '/avatar2.webp'
 import { SiNestjs } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
