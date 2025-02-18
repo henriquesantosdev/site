@@ -38,6 +38,7 @@ export default {
         tailwind: '#00BCFF',
 
         linkedin: '#0A66C2',
+        github: '#19191c'
       },
       backgroundImage: {
         pcv4: "url(/bg-v4-compress.webp)",

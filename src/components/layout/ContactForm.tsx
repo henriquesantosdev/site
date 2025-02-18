@@ -1,6 +1,6 @@
 import { Check, Send } from "lucide-react"
 import { useState } from "react";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import ringSpin from "/90-ring-spin.svg"
 
 export const ContactForm = () => {
@@ -81,7 +81,7 @@ export const ContactForm = () => {
           {successAlert ? (
             <button
               type="submit"
-              className="bg-green-500 hover:bg-green-600 dark:hover:bg-green-700 dark:bg-green-600 dark:text-white hover:text-white transition duration-100 text-green-900 font-semibold font-jet p-4 w-full rounded-lg flex gap-2 items-center justify-center">
+              className="bg-green-500 hover:bg-green-600 dark:hover:bg-green-700 dark:bg-green-600 dark:text-white hover:text-white transition duration-100 text-green-900 font-semibold font-jet p-4 w-full rounded-lg flex gap-2 items-center justify-center transition-none">
               <Check className="size-5" />
               <span>Enviado com sucesso</span>
             </button>
@@ -89,7 +89,7 @@ export const ContactForm = () => {
 
             <button
               type="submit"
-              className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-bluev7 font-semibold font-jet p-4 w-full rounded-lg flex gap-2 items-center justify-center">
+              className="bg-sky-500 hover:bg-sky-600 dark:hover:bg-blue-600 dark:bg-blue-800 dark:text-white hover:text-white transition duration-100 text-bluev7 font-semibold font-jet p-4 w-full rounded-lg flex gap-2 items-center justify-center transition-none">
               {loading ? (
                 <div className="flex gap-2 text-white">
                   <img src={ringSpin} alt="loading icon" />
@@ -118,6 +118,10 @@ export const ContactForm = () => {
         <a href="https://www.linkedin.com/in/henrique-santos-497b0026a/" target="_blank" className="font-jet bg-linkedin w-full p-4 rounded-lg flex items-center justify-center gap-2">
           <FaLinkedin className="size-6" />
           <span>Linkedin</span>
+        </a>
+        <a href="https://github.com/henriquesantosdev" target="_blank" className="mt-2 font-jet bg-github w-full p-4 rounded-lg flex items-center justify-center gap-2">
+          <FaGithubSquare className="size-6" />
+          <span>Github</span>
         </a>
       </div>
     </section>

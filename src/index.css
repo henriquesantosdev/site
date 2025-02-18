@@ -8,3 +8,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+div {
+  @apply transition-colors duration-300;
+}

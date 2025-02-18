@@ -2,6 +2,7 @@ import { Construction, MousePointerClick } from "lucide-react"
 import { CardComponentWinner } from "../projects/CardComponentWinner"
 import { TagComponentAlert } from "../TagComponentAlert"
 import { CardComponentSmartMoney } from "../projects/CardComponentSmartMoney"
+import { motion } from 'motion/react'
 
 export const Projects = () => {
   return (
@@ -15,8 +16,14 @@ export const Projects = () => {
         </h2>
       </div>
 
-      <CardComponentWinner />
-      <CardComponentSmartMoney />
+      <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
+        <CardComponentWinner />
+      </motion.div>
+
+      <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
+        <CardComponentSmartMoney />
+      </motion.div>
+
       <div className="text-sky-500 dark:text-blue-700 mt-6 flex gap-4 justify-center">
         <Construction className="size-5" />
         <p className=" text-sm font-jet">Mais projetos em desenvolvimento</p>
