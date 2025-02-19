@@ -1,6 +1,7 @@
-import { Contact, FileDown } from "lucide-react"
+import { ChevronRight, Contact, FileDown } from "lucide-react"
 import { ButtonComponent } from "../ButtonComponent"
 import avatar from '/avatar.webp'
+import { BlinkCharaterAnimation } from "../BlinkCharacterAnimation"
 
 export const HomeComponent = () => {
   return (
@@ -8,7 +9,11 @@ export const HomeComponent = () => {
 
       <div className="w-full md:w-5/12">
         <h1 className="text-white whitespace-nowrap font-bold text-[2.75rem]/10 md:text-5xl text-center md:text-left">Olá, eu sou <br /> Henrique Santos</h1>
-        <p className="text-sky-500 font-semibold text-2xl mt-4 md:mt-2 text-center md:text-left">Fullstack developer</p>
+        <span className="text-sky-500 font-semibold text-2xl pt-4 md:mt-2 text-center md:text-left flex items-center justify-center md:justify-start">
+          <ChevronRight className="size-8" />
+          <span className="mr-1">Fullstack developer</span>
+          <BlinkCharaterAnimation>|</BlinkCharaterAnimation>
+        </span>
 
         <div className="flex gap-2 mt-8">
           <ButtonComponent link="#contato">
