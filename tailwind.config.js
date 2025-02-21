@@ -36,6 +36,7 @@ export default {
         laravel: '#FF2D20',
         graphql: '#F6009C',
         tailwind: '#00BCFF',
+        docker: '#1D63ED',
 
         linkedin: '#0A66C2',
         github: '#19191c'
