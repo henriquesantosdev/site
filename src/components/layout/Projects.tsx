@@ -1,7 +1,6 @@
 import { Construction, MousePointerClick } from "lucide-react"
 import { CardComponentWinner } from "../projects/CardComponentWinner"
 import { TagComponentAlert } from "../TagComponentAlert"
-import { CardComponentSmartMoney } from "../projects/CardComponentSmartMoney"
 import { motion } from 'motion/react'
 
 export const Projects = () => {
@@ -18,10 +17,6 @@ export const Projects = () => {
 
       <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
         <CardComponentWinner />
-      </motion.div>
-
-      <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
-        <CardComponentSmartMoney />
       </motion.div>
 
       <div className="text-sky-500 dark:text-blue-700 mt-6 flex gap-4 justify-center">
